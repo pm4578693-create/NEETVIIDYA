@@ -1,9 +1,9 @@
 // ---- Settings: change these ----
 const EXAM_DATE = "2027-05-02T14:00:00"; // placeholder, set the real NEET date
 const COURSES = [
-  {name:"Foundation Batch", desc:"Class 11 NCERT-based, full syllabus.", price:"Rs 4,999"},
-  {name:"Target Batch", desc:"Class 12 plus revision and weekly tests.", price:"Rs 6,999"},
-  {name:"Test Series", desc:"30 full-length mock tests with analysis.", price:"Rs 1,999"}
+  {name:"Foundation Batch", desc:"Class 11 NCERT-based, full syllabus.", enquire:"click"},
+  {name:"Target Batch", desc:"Class 12 plus revision and weekly tests.", enquire:"click"},
+  {name:"Test Series", desc:"30 full-length mock tests with analysis.", enquire:"click"}
 ];
 const QUESTIONS = [
   {q:"Powerhouse of the cell is the:", o:["Ribosome","Mitochondrion","Golgi body","Lysosome"], a:1},
@@ -110,3 +110,4 @@ menuBtn.onclick = () => {
   menuBtn.setAttribute("aria-expanded", open);
 };
 navLinks.querySelectorAll("a").forEach(a => a.onclick = () => navLinks.classList.remove("open"));
+
