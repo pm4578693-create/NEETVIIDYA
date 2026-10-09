@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NEETVIDYA results and toppers">
+<title>Results - NEETVIDYA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-head{padding:56px 0 20px}
+.page-head h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:10px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 28px}
+.tab{padding:9px 18px;border-radius:30px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#e6f3f1;font:inherit;font-weight:600;cursor:pointer}
+.tab:hover{border-color:#7fe0d6}
+.tab.on{background:#ffc233;color:#06151a;border-color:#ffc233}
+.badge{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:rgba(127,224,214,.18);color:#7fe0d6;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.feat{list-style:none;padding:0;margin:12px 0}
+.feat li{padding:4px 0 4px 22px;position:relative;color:#b9d3cf}
+.feat li::before{content:"\2713";position:absolute;left:0;color:#ffc233;font-weight:700}
+.old{text-decoration:line-through;color:#7f9b97;font-size:1rem;font-weight:500;margin-left:8px}
+.dur{color:#7fe0d6;font-size:.9rem;font-weight:600}
+.rh{background:linear-gradient(90deg,#fff,#7fe0d6 55%,#ffc233);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat{text-align:center}
+.stat b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:2.8rem;line-height:1;background:linear-gradient(135deg,#ffc233,#7fe0d6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:#b9d3cf;font-weight:600}
+.ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.04);padding:12px 0}
+.track{display:flex;gap:44px;width:max-content;animation:scroll 40s linear infinite;font-weight:600;color:#ffc233;white-space:nowrap}
+.ticker:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.topper{position:relative;text-align:center;cursor:pointer;user-select:none}
+.topper:active{transform:scale(.98)}
+.medal{position:absolute;top:14px;left:14px;min-width:38px;height:38px;padding:0 8px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#06151a;background:#7fe0d6}
+.medal.m1{background:#ffc233;box-shadow:0 0 18px rgba(255,194,51,.7)}
+.medal.m2{background:#d7dfe3}
+.medal.m3{background:#cd7f32}
+.pic{width:110px;height:110px;border-radius:50%;object-fit:cover;border:3px solid #ffc233;margin:6px auto 12px;display:block}
+.pic.ini{display:flex;align-items:center;justify-content:center;font:800 2.2rem 'Bricolage Grotesque',sans-serif;color:#06151a;background:linear-gradient(135deg,#ffc233,#7fe0d6)}
+.score{font-family:'Bricolage Grotesque',sans-serif;font-size:2.1rem;font-weight:800;color:#ffc233;margin-top:8px}
+.score small{font-size:1rem;color:#b9d3cf;font-weight:500}
+.bar i{width:0;transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
+.rmeta{color:#7fe0d6;font-weight:600;font-size:.9rem}
+.cta{margin-top:40px;text-align:center}
+.cta p{margin-bottom:14px;font-size:1.2rem;font-weight:600}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+@media(prefers-reduced-motion:reduce){.track{animation:none}.bar i{transition:none}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<canvas id="bg"></canvas>
+
+<div class="topbar"><div class="wrap">
+  <a class="desk" href="https://wa.me/917439685658?text=Hello%20NEETVIDYA%2C%20I%20want%20to%20know%20about%20admission%20and%20batch%20details." target="_blank" rel="noopener" aria-label="Chat with the admission desk on WhatsApp"><b>Admission Desk</b> Open for 2027 batches. Chat on WhatsApp</a>
+  <span class="contacts">
+    <a href="tel:+917439685658">&#9990; +91 74396 85658</a>
+    <a href="https://t.me/neetvidya720official" target="_blank" rel="noopener">&#9992; Telegram</a>
+  </span>
+</div></div>
+
+<nav><div class="wrap">
+  <a class="logo" href="index.html"><img src="logo1.jpeg" alt="NEETVIDYA logo"><span>NEET<b>VIDYA</b></span></a>
+  <button class="menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="test-series.html">Test Series</a></li>
+    <li><a href="results.html" style="color:#ffc233">Results</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div></nav>
+
+<main>
+  <section class="res-hero"><div class="wrap">
+    <span class="eyebrow">Student Progress</span>
+    <h1 class="rh">Progress. Practice. Results.</h1>
+    <p class="lead">NEETVIDYA supports disciplined preparation through structured guidance, regular assessment, and continued student improvement over time.</p>
+    <div class="hero-btns">
+      <a class="btn alt" href="demo-test.html?id=0">Take a Free Demo Test</a>
+      <a class="btn ghost" href="courses.html">Explore Courses</a>
+    </div>
+  </div></section>
+
+  <section class="lpa"><div class="wrap">
+    <div class="grid">
+      <a class="card step" href="courses.html"><span class="num">01</span><h3>Learn</h3><p>Build strong concepts with structured guidance.</p><span class="go">Explore courses &rarr;</span></a>
+      <a class="card step" href="test-series.html"><span class="num">02</span><h3>Prepare</h3><p>Practise with regular tests and assessment.</p><span class="go">See test series &rarr;</span></a>
+      <a class="card step" href="#achievements"><span class="num">03</span><h3>Achieve</h3><p>Track improvement and celebrate every milestone.</p><span class="go">View achievements &rarr;</span></a>
+    </div>
+  </div></section>
+
+  <section id="achievements"><div class="wrap">
+    <span class="eyebrow">Our Achievements</span>
+    <h2>Highlights &amp; Achievements</h2>
+    <p class="sub">Every success story matters</p>
+    <div class="grid" id="ach-grid"></div>
+    <div class="hero-btns" style="margin-top:28px">
+      <button class="btn" id="celebrate">Celebrate with us</button>
+      <a class="btn alt" id="join" href="https://wa.me/917439685658?text=Hello%20NEETVIDYA%2C%20I%20want%20to%20join%20NEETVIDYA." target="_blank" rel="noopener">Join NEETVIDYA</a>
+    </div>
+  </div></section>
+</main>
+<canvas id="fx"></canvas>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="index.html"><img src="logo1.jpeg" alt="NEETVIDYA logo"><span>NEET<b>VIDYA</b></span></a>
+      <p>Medical education, coaching and examination platform. Learn Better. Prepare Smarter. Achieve More.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="test-series.html">Test Series</a></li>
+        <li><a href="results.html" style="color:#ffc233">Results</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Institute Desk</h4>
+      <address class="inst">
+        <strong>NEETVIDYA COACHING CENTER</strong><br>
+        Karimpur Main Road,<br>
+        Karimpur, Nadia<br><br>
+        Helpline: <a href="tel:+917439685658">+91 74396 85658</a><br>
+        <a href="tel:+918391021878">+91 83910 21878</a><br><br>
+        Email: <a href="mailto:neetvidya720@gmail.com">neetvidya720@gmail.com</a>
+      </address>
+      <a class="foot-btn" href="index.html#contact">Contact Institute</a>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a class="foot-btn tg" href="https://t.me/neetvidya720official" target="_blank" rel="noopener">Telegram Channel</a>
+      <a class="foot-btn" href="index.html#contact">Admission Desk Helpline<br><span>+91 74396 85658</span></a>
+    </div>
+  </div>
+  <div class="foot-bottom">&copy; <span id="yr"></span> NEETVIDYA. All rights reserved.</div>
+</footer>
+<script src="results.js"></script>
+</body>
+</html>

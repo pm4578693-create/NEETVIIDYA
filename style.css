@@ -157,3 +157,21 @@ section{scroll-margin-top:70px}
 /* ---- Faculty photo and experience cards ---- */
 .fac .photo,.fac .avatar{width:130px;height:130px}
 .fac .quote{margin-top:12px;padding-left:12px;border-left:3px solid #ffc233;font-style:italic;color:#b9d3cf}
+
+/* ---- Results page ---- */
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#7fe0d6;margin-bottom:12px}
+.res-hero{padding:72px 0 24px}
+.res-hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800;margin-bottom:16px}
+.lead{max-width:60ch;font-size:1.15rem;color:#b9d3cf;margin-bottom:26px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn.ghost{background:transparent;border:2px solid #7fe0d6;color:#7fe0d6;box-shadow:none}
+.btn.ghost:hover{background:#7fe0d6;color:#06151a}
+.step{display:block;text-decoration:none;color:inherit}
+.step .num{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:2.6rem;font-weight:800;color:#ffc233;line-height:1;margin-bottom:10px}
+.step p{color:#b9d3cf}
+.step .go{display:inline-block;margin-top:12px;color:#ffc233;font-weight:600;transition:transform .25s}
+.step:hover .go{transform:translateX(6px)}
+.newbeg{grid-column:1/-1;max-width:760px;width:100%;margin:0 auto;text-align:center;padding:42px 28px;border:1px solid rgba(255,194,51,.4)}
+.newbeg h3{font-size:1.6rem;margin:6px 0 12px}
+
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
